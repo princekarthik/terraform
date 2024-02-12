@@ -1,6 +1,7 @@
 //Cloudbuild resource using filename
 resource "google_cloudbuild_trigger" "filename-trigger" {
   count         = var.filename_is_trigger ? 1 : 0
+  project       = principal-rhino-413816
   trigger_template {
     branch_name = var.branch_name
     repo_name   = var.repo_name
